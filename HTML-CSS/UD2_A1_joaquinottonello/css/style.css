@@ -1,0 +1,88 @@
+html{
+    background-color: powderblue;
+    color: white;
+    padding-bottom: 29%;
+    border: 1px black solid;
+    border-style: groove;
+    font-style: oblique;
+    font-family: 'Courier New', Courier, monospace;
+    font-display: swap;
+    border-collapse: collapse;
+
+    border-top-left-radius: 50px;
+}
+body{
+    position: sticky;
+    background-color: paleturquoise;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 100%;
+    border: 0.5px solid black;
+    border-style: outset;
+    border-spacing: 50%;
+}
+
+.product1{
+    position: auto;
+    text-align: center;
+    top: 260.5px;
+    padding: 10%;
+    margin-right: auto;
+    width: fit-content;
+    left: 200px
+}
+
+.product2{
+    position: auto;
+    text-align: center;
+    top: 260.5px;
+    padding: 10%;
+    margin-right: auto;
+    width: fit-content;
+    left: 200px 
+}
+.product3{
+    text-align: center;
+    top: 260.5px;
+    padding: 10%;
+    margin-right: auto;
+    width: fit-content;
+    left: 200px
+    
+    
+}
+.product4{
+    position: auto;
+    text-align: center;
+    top: 260.5px;
+    padding: 10%;
+    margin-right: auto;
+    width: fit-content;
+    left: 200px
+    
+    
+}
+h2{
+    text-align: center;
+}
+img{
+    position: sticky;
+}
+header{
+    background-color: aqua;
+    padding-bottom: 10%;
+    position: static;
+    margin-top: 0%;
+    padding-top: 1%;
+    top: 0;
+    border-radius: 5%;
+    
+}
+h1{
+    border: 1px solid black;
+    
+}

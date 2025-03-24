@@ -1,0 +1,228 @@
+1. Variables y Estructuras de Datos
+javascript
+Run
+Copy code
+let carrito = []; // Array para almacenar los productos del carrito
+2. Funciones para Manejar el Carrito
+Agregar Producto al Carrito
+javascript
+Run
+Copy code
+function agregarAlCarrito(producto) {
+    const index = carrito.findIndex(item => item.id === producto.id);
+    if (index > -1) {
+        carrito[index].cantidad += 1; // Aumentar cantidad si ya existe
+    } else {
+        producto.cantidad = 1; // Inicializar cantidad
+        carrito.push(producto);
+    }
+    render();
+}
+Eliminar Producto del Carrito
+javascript
+Run
+Copy code
+function eliminarDelCarrito(productoId) {
+    carrito = carrito.filter(producto => producto.id !== productoId);
+    render();
+}
+Actualizar Cantidad de un Producto
+javascript
+Run
+Copy code
+function actualizarCantidad(productoId, nuevaCantidad) {
+    const producto = carrito.find(item => item.id === productoId);
+    if (producto) {
+        if (nuevaCantidad <= 0) {
+            eliminarDelCarrito(productoId);
+        } else {
+            producto.cantidad = nuevaCantidad;
+            render();
+        }
+    }
+}
+Calcular Total del Carrito
+javascript
+Run
+Copy code
+function calcularTotal() {
+    return carrito.reduce((total, producto) => total + (producto.precio * producto.cantidad), 0);
+}
+Vaciar el Carrito
+javascript
+Run
+Copy code
+function vaciarCarrito() {
+    carrito = [];
+    render();
+}
+Aplicar Descuentos o Cupones
+javascript
+Run
+Copy code
+function aplicarDescuento(codigo) {
+    const descuentos = {
+        'DESCUENTO10': 0.10, // 10% de descuento
+        'DESCUENTO20': 0.20  // 20% de descuento
+    };
+    const descuento = descuentos[codigo.toUpperCase()];
+    if (descuento) {
+        const total = calcularTotal();
+        return total - (total * descuento);
+    }
+    return calcularTotal(); // Sin descuento
+}
+3. Funciones para Renderizar el Carrito
+javascript
+Run
+Copy code
+function render() {
+    const carritoElement = document.getElementById('carrito');
+    carritoElement.innerHTML = ''; // Limpiar el contenido actual
+
+    carrito.forEach(producto => {
+        const itemElement = document.createElement('div');
+        itemElement.textContent = `${producto.nombre} - $${producto.precio} (Cantidad: ${producto.cantidad})`;
+
+        // Botón para eliminar producto
+        const btnEliminar = document.createElement('button');
+        btnEliminar.textContent = 'Eliminar';
+        btnEliminar.onclick = () => eliminarDelCarrito(producto.id);
+        itemElement.appendChild(btnEliminar);
+
+        // Campo para actualizar cantidad
+        const inputCantidad = document.createElement('input');
+        inputCantidad.type = 'number';
+        inputCantidad.value = producto.cantidad;
+        inputCantidad.min = 1;
+        inputCantidad.onchange = (e) => actualizarCantidad(producto.id, parseInt(e.target.value));
+        itemElement.appendChild(inputCantidad);
+
+        carritoElement.appendChild(itemElement);
+    });
+
+    const totalElement = document.createElement('div');
+    totalElement.textContent = `Total: $${calcularTotal()}`;
+    carritoElement.appendChild(totalElement);
+}
+4. Funciones para Almacenamiento Local
+Guardar Carrito en Almacenamiento Local
+javascript
+Run
+Copy code
+function guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+Cargar Carrito desde Almacenamiento Local
+javascript
+Run
+Copy code
+function cargarCarrito() {
+    const carritoGuardado = localStorage.getItem('carrito');
+    if (carritoGuardado) {
+        carrito = JSON.parse(carritoGuardado);
+        render();
+    }
+}
+5. Funciones de Validación y Mensajes
+Validar Carrito
+javascript
+Run
+Copy code
+function validarCarrito() {
+    if (carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return false;
+    }
+    return true;
+}
+Mostrar Mensajes
+javascript
+Run
+Copy code
+function mostrarMensaje(mensaje) {
+    const mensajeElement = document.getElementById('mensaje');
+    mensajeElement.textContent = mensaje;
+}
+6. Funciones de Checkout
+Proceder al Pago
+javascript
+Run
+Copy code
+function procederAlPago() {
+ if (validarCarrito()) {
+        const total = calcularTotal();
+        // Aquí podrías integrar una API de pago
+        alert(`Procediendo al pago de $${total}`);
+        vaciarCarrito(); // Vaciar el carrito después del pago
+    }
+}
+Simular un Proceso de Pago
+javascript
+Run
+Copy code
+function simularPago() {
+    setTimeout(() => {
+        alert("Pago realizado con éxito.");
+        vaciarCarrito();
+    }, 2000); // Simula un retraso de 2 segundos
+}
+7. Eventos
+Agregar Evento a Botones de Agregar Producto
+javascript
+Run
+Copy code
+document.getElementById('btnAgregarProducto1').onclick = () => agregarAlCarrito({ id: 1, nombre: 'Producto 1', precio: 10 });
+document.getElementById('btnAgregarProducto2').onclick = () => agregarAlCarrito({ id: 2, nombre: 'Producto 2', precio: 20 });
+Agregar Evento para Vaciar el Carrito
+javascript
+Run
+Copy code
+document.getElementById('btnVaciarCarrito').onclick = () => {
+    vaciarCarrito();
+    mostrarMensaje("El carrito ha sido vaciado.");
+};
+Agregar Evento para Guardar el Carrito
+javascript
+Run
+Copy code
+document.getElementById('btnGuardarCarrito').onclick = () => {
+    guardarCarrito();
+    mostrarMensaje("El carrito ha sido guardado.");
+};
+Agregar Evento para Cargar el Carrito
+javascript
+Run
+Copy code
+document.getElementById('btnCargarCarrito').onclick = () => {
+    cargarCarrito();
+    mostrarMensaje("El carrito ha sido cargado.");
+};
+Agregar Evento para Proceder al Pago
+javascript
+Run
+Copy code
+document.getElementById('btnProcederPago').onclick = () => procederAlPago();
+8. Ejemplo de Uso
+javascript
+Run
+Copy code
+// Ejemplo de productos
+const producto1 = { id: 1, nombre: 'Producto 1', precio: 10 };
+const producto2 = { id: 2, nombre: 'Producto 2', precio: 20 };
+
+// Agregar productos al carrito
+agregarAlCarrito(producto1);
+agregarAlCarrito(producto2);
+9. HTML de Ejemplo
+html
+Run
+Copy code
+<div id="carrito"></div>
+<div id="mensaje"></div>
+<button id="btnAgregarProducto1">Agregar Producto 1</button>
+<button id="btnAgregarProducto2">Agregar Producto 2</button>
+<button id="btnVaciarCarrito">Vaciar Carrito</button>
+<button id="btnGuardarCarrito">Guardar Carrito</button>
+<button id="btnCargarCarrito">Cargar Carrito</button>
+<button id="btnProcederPago">Proceder al Pago</button>

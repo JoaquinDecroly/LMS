@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centramos el contenido horizontalmente */
+  align-items: center; /* Centramos el contenido verticalmente */
+  min-height: 100vh; /* Aseguramos que ocupe toda la altura de la ventana */
+}
+
+/* Contenedor principal */
+.container {
+  width: 100%; /* Ancho del contenedor */
+  max-width: 600px; /* Ancho máximo */
+  background: #ffffff; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centramos el texto */
+}
+
+/* Campo de entrada para agregar tareas */
+#taskInput {
+  width: 60%; /* Ocupa todo el ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  padding-right: 50px;
+  margin-bottom: 10px; /* Margen inferior */
+  border: 1px solid #ccc; /* Borde suave */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  position: relative;
+  left: 70px;
+}
+
+/* Botón para agregar tareas */
+#addTask {
+  width: 70%; /* Ocupa todo el ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  background-color: #28a745; /* Color verde */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cursor de clic */
+  position: relative;
+  left: 70px;
+  bottom: 6px;
+  transition: none;
+  width: 547.5px;
+}
+
+#addTask:hover {
+  background-color: #218838; /* Cambio de color al pasar el mouse */
+}
+
+/* Lista de tareas */
+#taskList {
+  list-style-type: none; /* Quitamos el estilo de lista predeterminado */
+  padding: 0; /* Quitamos el padding predeterminado */
+   margin: 0; /*Quitamos el margen predeterminado */
+  display: block;
+  position: relative;
+  left: 500px;
+}
+
+/* Elementos de la lista */
+#taskList li {
+  display: flex; /* Usamos flexbox para alinear los elementos */
+  align-items: center;  
+  padding-right: 500px;
+  padding-bottom: 5px;
+  background-color: #f9f9f9; /* Fondo claro */
+  border: 1px solid #ddd; /* Borde suave */
+  border-radius: 4px; /* Bordes redondeados */
+  position: relative; /* Para posicionar absolutamente los botones */
+  top: 50px;
+  right: 500px;
+  
+
+}
+
+/* Tareas completadas */
+#taskList li.completed {
+  text-decoration: line-through; /* Tachado para tareas completadas */
+  color: red; /*Color más tenue*/
+}
+
+/* Botones dentro de los elementos de la lista */
+#taskList li button {
+  position: absolute; /* Posicionamos los botones absolutamente */
+  top: 50%; /* Centramos verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para centrar */
+  padding: 5px 10px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de clic */
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Botón de eliminar */
+#taskList li .delete {
+  position: relative;
+  left: 560px;
+  top: 15px;
+  background-color: #dc3545; /* Rojo */
+  color: white; /* Texto blanco */
+}
+
+#taskList li .delete:hover {
+  background-color: lightcoral;
+  color: black; /* Cambio de color al pasar el mouse */
+}
+
+/* Botón de completar/descompletar */
+#taskList li .complete {
+  position: relative;
+  left: 400px;
+  top: 15px;
+  background-color: #007bff; /* Azul */
+  color: white; /* Texto blanco */
+}
+
+#taskList li .complete:hover {
+  background-color: red; 
+  color: rgb(0, 0, 0);
+}
+#tasklist li .complete::before{
+  background-color: red; 
+  color: rgb(0, 0, 0);
+}
+
+/* Mensajes temporales */
+#message {
+  margin-top: 10px; /* Margen superior */
+  padding: 10px; /* Espaciado interno */
+  background-color: #ffc107; /* Amarillo */
+  color: white; /* Texto blanco */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 14px; /* Tamaño de fuente */
+  display: none; /* Oculto por defecto */;
+}
+
+#message.visible {
+  display: block; /* Visible cuando se muestre */
+}

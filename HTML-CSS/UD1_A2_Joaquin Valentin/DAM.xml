@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<alumnosDAM>
+    <nombreAlumnos>A</nombreAlumnos>
+    <notaMedia>0</notaMedia>
+    <asistencias>0</asistencias>
+        <SI>0</SI>
+        <NO>0</NO>
+    <faltas>0</faltas>
+        <faltasJustificadas>0</faltasJustificadas>
+        <faltasNOjustificadas>0</faltasNOjustificadas> 
+    <retrasos>0</retrasos>
+    <nombreAlumnos>B</nombreAlumnos>
+    <notaMedia>0</notaMedia>
+    <asistencias>0</asistencias>
+        <SI>0</SI>
+        <NO>0</NO>
+    <faltas>0</faltas>
+        <faltasJustificadas>0</faltasJustificadas>
+        <faltasNOjustificadas>0</faltasNOjustificadas> 
+    <retrasos>0</retrasos>
+    <nombreAlumnos>C</nombreAlumnos>
+    <notaMedia>0</notaMedia>
+    <asistencias>0</asistencias>
+        <SI>0</SI>
+        <NO>0</NO>
+    <faltas>0</faltas>
+        <faltasJustificadas>0</faltasJustificadas>
+        <faltasNOjustificadas>0</faltasNOjustificadas> 
+    <retrasos>0</retrasos>
+    <nombreAlumnos>D</nombreAlumnos>
+    <notaMedia>0</notaMedia>
+    <asistencias></asistencias>
+        <SI>0</SI>
+        <NO>0</NO>
+    <faltas>0</faltas>
+        <faltasJustificadas>0</faltasJustificadas>
+        <faltasNOjustificadas>0</faltasNOjustificadas> 
+    <retrasos>0</retrasos>
+
+
+</alumnosDAM>

@@ -1,0 +1,429 @@
+/* Estilos generales */
+html, body {
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fuente general */
+    display: flex;
+    flex-direction: column; /* Disposición en columna */
+    background-color: #f4f4f4; /* Color de fondo claro */
+    color: #333; /* Color del texto */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para cambios de color */
+    margin: 0;
+    margin-bottom: 40px; /* Espaciado inferior */
+}
+
+/* Estilos para el modo nocturno */
+body.modo-nocturno {
+    background-color: #333; /* Color de fondo oscuro */
+    color: #f4f4f4; /* Color del texto claro */
+}
+
+body.modo-nocturno .producto {
+    background-color: #444; /* Color de fondo más oscuro para los productos */
+    border: 1px solid #666; /* Borde más claro para los productos */
+    color: #f4f4f4; /* Color del texto más claro */
+}
+
+body.modo-nocturno .producto .precio {
+    color: #2c2d2e; /* Color para el precio */
+    font-weight: bold; /* Hacer el precio más destacado */
+    font-size: 1.2em; /* Aumentar el tamaño de la fuente del precio */
+}
+
+body.modo-nocturno .producto .descripcion {
+    color: #2c2d2e; /* Color para la descripción */
+    font-size: 1em; /* Tamaño de fuente normal para la descripción */
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #007bff; /* Color de fondo del encabezado */
+    color: white; /* Color del texto en el encabezado */
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+header.modo-nocturno {
+    background-color: #444; /* Color de fondo del encabezado en modo nocturno */
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinear verticalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+}
+
+/* Estilos de la estructura del encabezado */
+.Encabezado {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Definir columnas */
+    grid-template-rows: 1fr; /* Definir filas */
+    gap: 0px 0px; /* Espaciado entre elementos */
+    grid-auto-flow: row; /* Flujo automático de filas */
+    grid-template-areas: "Boton-menu Boton-nocturno Buscador Carrito"; /* Áreas del grid */
+}
+
+.Boton-menu { grid-area: Boton-menu; }
+.Boton-nocturno { grid-area: Boton-nocturno; }
+.Buscar { grid-area: Buscador; }
+.Carrito { grid-area: Carrito; }
+
+.ParteDerecha {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+}
+
+.ParteIzquierda {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+}
+
+.Marca {
+    flex-grow: 1; /* Permitir que la marca ocupe el espacio disponible */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos del botón de modo nocturno */
+.boton-tema {
+    background: none; /* Quitar el fondo */
+    border: none; /* Quitar el borde */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    font-size: 24px; /* Tamaño de la fuente */
+    padding: 10px; /* Espaciado interno */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+.boton-tema:hover {
+    color: #ffcc00; /* Cambiar el color al pasar el ratón */
+}
+
+/* Estilos de los productos */
+.producto {
+    background: #f9f9f9; /* Color de fondo de los productos */
+    border: 1px solid #ddd; /* Borde de los productos */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    transition: box-shadow 0.3s; /* Transición suave para la sombra */
+    position: relative; /* Para que el contenedor de información se posicione correctamente */
+}
+
+/* Estilos del contador de rebajas */
+#contador-rebajas {
+    color: white; /* Color del texto del contador */
+    text-align: center; /* Centrar el texto */
+    margin-top: 10px; /* Espaciado superior */
+    background-color: #00c8ff; /* Color de fondo del contador */
+    padding: 10px; /* Espaciado interno */
+}
+
+#contador-rebajas p {
+    transition: font-size 0.3s; /* Transición suave para el tamaño de la fuente */
+}
+
+#contador-rebajas:hover p {
+    font-size: 1.2em; /* Aumentar el tamaño de la fuente al pasar el ratón */
+}
+
+/* Estilos de la imagen del producto */
+.imagen-producto {
+    display: block; /* Mostrar como bloque */
+    margin: 0 auto; /* Centrar horizontalmente */
+    max-width: 100%; /* Asegurarse de que la imagen no exceda el contenedor */
+    height: 300px; /* Mantener la proporción de la imagen */
+}
+
+/* Estilos de la información del producto */
+.info-producto {
+    display: none; /* Ocultar por defecto */
+    position: absolute; /* Posicionar absolutamente */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+    border: 1px solid #ddd; /* Borde de la información */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+    text-align: center; /* Centrar el texto */
+    top: 50%; /* Mover el mensaje justo debajo de la imagen */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajustar para centrar */
+    width: 500px; /* Ancho fijo para el contenedor */
+}
+
+/* Mostrar la información al pasar el ratón sobre la imagen */
+.producto:hover .info-producto {
+    display: block; /* Mostrar el contenedor de información */
+}
+
+/* Estilos del encabezado */
+header h1 {
+    text-align: center; /* Centrar el texto del encabezado */
+    margin: 0; /* Sin margen */
+}
+
+/* Estilos de navegación */
+nav {
+    margin-top: 10px; /* Espaciado superior */
+}
+
+nav ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    display: flex; /* Disposición en fila */
+    align-items: center; /* Alinear verticalmente */
+}
+
+nav ul li {
+    position: relative; /* Posición relativa para el menú desplegable */
+}
+
+ul #menu-desplegable{
+    z-index: 1;
+}
+
+nav ul li label {
+    font-size: 30px; /* Tamaño de la fuente del botón de menú */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+}
+
+nav ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.hamburguesa {
+    display: none; /* Ocultar el checkbox de hamburguesa */
+}
+
+/* Estilos del menú desplegable */
+#menu-desplegable {
+    display: none; /* Ocultar por defecto */
+    position: absolute; /* Cambiar a absolute para posicionar correctamente */
+    background-color: white; /* Color de fondo del menú */
+    border: 1px solid #ccc ; /* Borde del menú */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del menú */
+    margin-top: 10px; /* Espaciado entre el botón de hamburguesa y el menú */
+    width: 200px; /* Ancho fijo para el menú desplegable */
+    left: 3%; /* Alinear a la izquierda del botón de hamburguesa */
+    top: 3%; /* Colocar el menú justo debajo del botón */
+}
+
+/* Si deseas que el menú se alinee a la derecha del botón de hamburguesa */
+.Boton-menu {
+    position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
+}
+
+/* Mostrar el menú cuando el checkbox está marcado */
+.hamburguesa:checked + label + #menu-desplegable {
+    display: block; /* Mostrar el menú cuando el checkbox está marcado */
+}
+
+#menu-desplegable li {
+    padding: 10px; /* Espaciado interno de los elementos del menú */
+}
+
+#menu-desplegable li a {
+    color: black; /* Color del texto de los enlaces del menú */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Hacer que el área del enlace sea más grande */
+}
+
+#menu-desplegable li:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos de la sección de productos */
+.lista-productos {
+    display: grid; /* Disposición en grid */
+    grid-template-columns: repeat(3, 1fr); /* Tres productos por fila */
+    gap: 20px; /* Espaciado entre productos */
+}
+
+.producto:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el ratón */
+}
+
+.producto h3 {
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+.producto button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 150px; /* Ancho fijo para ambos botones */
+    margin: 5px 0; /* Espaciado vertical entre botones */
+}
+
+.producto button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para la barra de búsqueda y carrito */
+.buscar-carrito {
+    display: flex; /* Disposición en fila */
+    align-items: center; /* Alinear verticalmente */
+}
+
+#form-busqueda {
+    display: flex; /* Disposición en fila */
+    align-items: center; /* Alinear verticalmente */
+}
+
+#entrada-busqueda {
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde del campo de búsqueda */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-right: 10px; /* Espaciado entre el campo de búsqueda y el botón */
+}
+
+#form-busqueda button {
+    background-color: #007bff; /* Color de fondo del botón de búsqueda */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#form-busqueda button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+#icono-carrito {
+    display: flex; /* Disposición en fila */
+    align-items: center; /* Alinear verticalmente */
+    margin-left: 20px; /* Espaciado entre el icono del carrito y otros elementos */
+}
+
+#vaciar-carrito {
+    background-color: #007bff; /* Color de fondo del botón de vaciar carrito */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+ #vaciar-carrito:hover {
+    background-color: #006de1; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para el contador de rebajas */
+#contador-rebajas {
+    color: white; /* Color del texto del contador */
+    text-align: center; /* Centrar el texto */
+    margin-top: 10px; /* Espaciado superior */
+    background-color: #00c8ff; /* Color de fondo del contador */
+    padding: 10px; /* Espaciado interno */
+}
+
+#contador-rebajas p {
+    transition: font-size 0.3s; /* Transición suave para el tamaño de la fuente */
+}
+
+#contador-rebajas:hover p {
+    font-size: 1.2em; /* Aumentar el tamaño de la fuente al pasar el ratón */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambiar a disposición en columna */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .lista-productos {
+        grid-template-columns: 1fr; /* Un producto por fila */
+    }
+
+    .contenedor {
+        width: 95%; /* Ajustar el contenedor en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .lista-productos {
+        grid-template-columns: 1fr; /* Un producto por fila */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambiar a disposición en columna */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Espaciado inferior entre elementos del menú */
+    }
+
+    label {
+        font-size: 20px; /* Tamaño de la fuente del label */
+    }
+
+    .producto {
+        padding: 10px; /* Reducir el padding en productos */
+    }
+}
+
+/* Estilos del pie de página */
+.pie-principal {
+    background-color: #007bff; /* Color de fondo del pie de página */
+    color: white; /* Color del texto en el pie de página */
+    padding: 20px 0; /* Espaciado interno */
+}
+
+.columnas-pie {
+    display: flex; /* Disposición en fila */
+    justify-content: space-around; /* Espacio entre columnas */
+    flex-wrap: wrap; /* Permitir que las columnas se envuelvan */
+}
+
+.columna-pie {
+    flex: 1; /* Permitir que cada columna ocupe espacio igual */
+    min-width: 200px; /* Ancho mínimo de las columnas */
+    margin: 10px; /* Margen entre columnas */
+}
+
+.columna-pie h3 {
+    margin-bottom: 10px; /* Margen inferior del título de la columna */
+}
+
+.columna-pie ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+}
+
+.columna-pie ul li {
+    margin: 5px 0; /* Margen vertical entre elementos de la lista */
+}
+
+.columna-pie ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.columna-pie ul li a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+.parte-inferior-pie {
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px; /* Margen superior */
+}

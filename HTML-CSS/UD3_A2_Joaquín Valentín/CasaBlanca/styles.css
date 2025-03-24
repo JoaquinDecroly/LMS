@@ -1,0 +1,110 @@
+
+@media (max-width: 768px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    /* Estilos del encabezado */
+    header {
+        background-color: #002868;
+        color: #ffffff;
+        margin: initial;
+        max-width: 100%;
+    }
+
+    /* Estilos para las imágenes */
+    .heroe img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .diseno-grid img {
+        max-width: 100%; /* Cambiado para que se ajuste al contenedor */
+        height: auto; /* Mantener la relación de aspecto */
+    }
+
+    .contenedor-header {   
+        display: flex; /* Cambiado a flex para mejor alineación en móviles */
+        flex-direction: column; /* Alinear elementos verticalmente */
+        align-items: center; /* Centrar elementos */
+        max-width: 100%;
+        padding: 1rem; /* Añadir un poco de padding */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Reducir tamaño del título */
+        text-align: center; /* Centrar el título */
+    }
+
+    /* Sección de bienvenida */
+    .heroe {
+        text-align: center;
+        padding: 2rem;
+        background-color: #ffffff;
+    }
+
+    /* Diseño en cuadrícula */
+    .diseno-grid {
+        display: grid;
+        grid-template-columns: 1fr; /*una sola columna */
+        gap: 1rem;
+        padding: 2rem;
+        background-color: #e2e2e2;
+    }
+
+    .item-grid {
+        background: white;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    /* Tabla */
+    .tabla-noticias {
+        padding: 2rem;
+        background: #ffffff;
+        max-width: 100%; /* ocupar todo el ancho */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        font-size: 0.9rem; 
+    }
+
+    /* Galería */
+    .galeria {
+        padding: 2rem;
+        background-color: #ffffff;
+        text-align: center;
+    }
+
+    .contenedor-galeria {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .contenedor-galeria img {
+        width: 100%; /* ajuste al contenedor */
+        max-width: 200px; /* tamaño máximo de las imágenes */
+        border: 1px solid #ccc;
+    }
+
+    /* Pie de página */
+    footer {
+        background-color: #002868;
+        color: #ffffff;
+        text-align: center;
+        padding: 1rem 0;
+    }
+}

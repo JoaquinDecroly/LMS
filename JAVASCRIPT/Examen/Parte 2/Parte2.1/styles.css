@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente de la página */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para cambios de color */
+}
+
+header {
+    background-color: #4CAF50; /* Color de fondo del encabezado */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.carrito {
+    font-size: 1.2em; /* Tamaño de fuente */
+    display: flex; /* Usar flexbox para alinear icono y texto */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.carrito i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.hamburguesa {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del icono */
+    font-size: 1.5em; /* Tamaño del icono */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+.menu {
+    display: none; /* Ocultar el menú por defecto */
+    background-color: #4CAF50; /* Color de fondo del menú */
+    position: absolute; /* Posición absoluta para el menú */
+    top: 60px; /* Ajustar la posición del menú */
+    right: 90%; /* Ajustar la posición del menú */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1000; /* Asegurar que el menú esté por encima de otros elementos */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+.menu.show {
+    display: block; /* Mostrar el menú */
+    opacity: 1; /* Hacer visible el menú */
+}
+
+.menu ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+.menu li {
+    padding: 10px; /* Espaciado interno para los elementos del menú */
+}
+
+.menu li a {
+    color: white; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.menu li a:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+.modo-nocturno {
+    background-color: #333; /* Color de fondo en modo nocturno */
+    color: white; /* Color del texto en modo nocturno */
+}
+
+.producto {
+    border: 1px solid #ccc; /* Borde de los productos */
+    margin: 10px; /* Margen entre productos */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.producto button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+.producto button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+
+body {
+    font-family: Arial, sans-serif; /* Fuente de la página */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para cambios de color */
+}
+
+header {
+    background-color: #4CAF50; /* Color de fondo del encabezado */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.carrito {
+    font-size: 1.2em; /* Tamaño de fuente */
+    display: flex; /* Usar flexbox para alinear icono y texto */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.carrito i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+.items-carrito {
+    padding: 20px; /* Espaciado interno */
+    border-top: 1px solid #ccc; /* Borde superior */
+}
+
+.item-carrito {
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    margin: 10px 0; /* Margen entre elementos del carrito */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde de los productos */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.item-carrito button {
+    background-color: #d9534f; /* Color de fondo del botón de eliminar */
+}
+
+.item-carrito button:hover {
+    background-color: #c9302c; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para el modo nocturno */
+body.modo-nocturno {
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #ffffff; /* Color de texto claro */
+}
+
+header.modo-nocturno {
+    background-color: #1f1f1f; /* Color de fondo del encabezado en modo nocturno */
+}
+
+.item-carrito.modo-nocturno {
+    border: 1px solid #444; /* Borde de los productos en modo nocturno */
+}
+
+button.modo-nocturno {
+    background-color: #333; /* Color de fondo del botón en modo nocturno */
+}
+
+button.modo-nocturno:hover {
+    background-color: #555; /* Color de fondo al pasar el rat ón en modo nocturno */
+}
+
+.fas.fa-sun{
+    color: #f7dc6f;
+    transition: none;
+    cursor: crosshair;
+    width: 35.3px;
+    height: 21.31px;
+    transform: translate(0px, -2px);
+    }
+
+    .fas.fa-sun::before{
+        color: #c0c0c0;
+        transition: none;
+        cursor: crosshair;
+        width: 35.3px;
+        height: 21.31px;
+        transform: translate(0px, -2px);
+        }
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinear elementos al inicio */
+    }
+
+    .carrito {
+        margin-top: 10px; /* Margen superior para el carrito */
+    }
+
+    .izquierda {
+        width: 100%; /* Ancho completo para la sección izquierda */
+        justify-content: space-between; /* Espacio entre botones */
+    }
+
+    button {
+        margin-right: 5px; /* Reducir margen entre botones */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px; /* Reducir espaciado interno en pantallas muy pequeñas */
+    }
+
+    .carrito {
+        font-size: 1em; /* Reducir tamaño de fuente del carrito */
+    }
+
+    button {
+        font-size: 0.9em; /* Reducir tamaño de fuente de los botones */
+        padding: 8px; /* Reducir espaciado interno de los botones */
+    }
+}

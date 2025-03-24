@@ -1,0 +1,91 @@
+/* Estilos generales y responsivos */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; /* Improved readability */
+
+    display: flex;
+    flex-direction: column; 
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: background-color 0.3s, color 0.3s; 
+    margin: 0;
+    margin-bottom: 40px; 
+}
+
+/* Estilos para el modo nocturno */
+body.modo-nocturno {
+    background-color: #333; 
+    color: #f4f4f4; 
+}
+
+header {
+    background-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+
+    color: white; 
+    padding: 10px 20px; 
+}
+
+header.modo-nocturno {
+    background-color: #444; 
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.producto {
+    background: #f9f9f9;
+    border-radius: 10px; /* More rounded corners for a modern look */
+
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 15px; 
+    text-align: center; 
+    transition: box-shadow 0.3s; 
+}
+
+.producto:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.producto h3 {
+    margin: 10px 0; 
+}
+
+.producto button {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    width: 150px; 
+    margin: 5px 0; 
+}
+
+.producto button:hover {
+    background-color: #0056b3; 
+}
+
+/* Media Queries for Responsiveness and mobile-first design */
+
+@media (max-width: 768px) { /* Adjust layout for smaller screens */
+
+    .lista-productos {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+        padding: 10px; /* Added padding for better spacing */
+
+    }
+}

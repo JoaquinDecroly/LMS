@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<agenda>
+    <indentificacion>
+          <nombre>OOOOO</nombre>
+        <apellido>OOOOO</apellido> 
+    </indentificacion>
+    <hospedaje>
+        <direccion>C/00000</direccion>
+    </hospedaje>
+    <telefonos>
+        <fijo>00000000</fijo>
+        <tlfCasa>0000000</tlfCasa>
+        <movilPersonal>0000000</movilPersonal>
+    </telefonos>
+</agenda>

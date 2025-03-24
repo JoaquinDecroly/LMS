@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Tu tienda en línea</title>
+
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
+</head>
+<body>
+    <header>
+        <h1>Artículos en tu Carrito</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carrito.html">Ver Carrito</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Artículos en tu Carrito</h2>
+
+        <div id="cart-items"></div>
+        <div id="total-price"></div>
+        <button id="clear-cart">Vaciar el Carrito</button>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tienda de Imágenes</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItems = JSON.parse(localStorage.getItem('carrito')) || [];
+            const cartDiv = document.getElementById('cart-items');
+            const totalPriceDiv = document.getElementById('total-price');
+
+            function updateCartDisplay() {
+                cartDiv.innerHTML = '';
+                cartItems.forEach((item, index) => {
+                    const itemDiv = document.createElement('div'); 
+                    itemDiv.textContent = `Artículo ${index + 1}: $${item.precio.toFixed(2)}`; 
+                    const removeButton = document.createElement('button'); 
+                    removeButton.textContent = 'Eliminar'; 
+                    removeButton.addEventListener('click', function() { 
+                        cartItems.splice(index, 1); 
+                        localStorage.setItem('carrito', JSON.stringify(cartItems)); 
+                        updateCartDisplay(); 
+                    }); 
+                    itemDiv.appendChild(removeButton); 
+                    cartDiv.appendChild(itemDiv);
+                });
+
+                const totalPrice = cartItems.reduce((total, item) => total + item.precio, 0);
+                totalPriceDiv.textContent = `Total: $${totalPrice.toFixed(2)}`;
+            }
+
+            updateCartDisplay();
+
+            document.getElementById('clear-cart').addEventListener('click', function () {
+                localStorage.removeItem('carrito'); 
+                cartItems.length = 0; 
+                updateCartDisplay();
+            });
+        });
+    </script>
+</body>
+</html>

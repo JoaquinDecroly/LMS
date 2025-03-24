@@ -1,0 +1,193 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "izdo derech";
+  }
+  
+  .izdo { grid-area: izdo; }
+  
+  .derech { grid-area: derech; }
+
+  .container1 {  display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Producto cantidad precioo total"
+      "Producto1 cantidad1 precio1 total1"
+      "producto2 cantida2 precio2 total2"
+      "producto3 cantidad3 precio3 total3";
+  }
+  
+  .Producto { grid-area: Producto; }
+  
+  .cantidad { grid-area: cantidad; }
+  
+  .precioo { grid-area: precioo; }
+  
+  .total { grid-area: total; }
+  
+  .Producto1 { grid-area: Producto1; }
+  
+  .cantidad1 { grid-area: cantidad1; }
+  
+  .precio1 { grid-area: precio1; }
+  
+  .total1 { grid-area: total1; }
+  
+  .precio2 { grid-area: precio2; }
+  
+  .total2 { grid-area: total2; }
+  
+  .cantida2 { grid-area: cantida2; }
+  
+  .producto2 { grid-area: producto2; }
+  
+  .producto3 { grid-area: producto3; }
+  
+  .cantidad3 { grid-area: cantidad3; }
+  
+  .precio3 { grid-area: precio3; }
+  
+  .total3 { grid-area: total3; }
+
+  .container2 {  display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "totalGrande totalGrande"
+      "totalpequeño numero0";
+  }
+  
+  .totalGrande { grid-area: totalGrande; }
+  
+  .totalpequeño { grid-area: totalpequeño; }
+  
+  .numero0 { grid-area: numero0; }
+
+
+
+
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .izdo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .derech {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container1,
+  .container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+
+  .totalGrande,
+  .totalpequeño {
+    font-weight: bold;
+  
+    
+  }
+  
+  .Producto1,
+  .producto2,
+  .producto3 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ref {
+    font-size: small;
+    color: #777;
+  }
+  
+  .quantity-button {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 15px;
+    position: absolute;
+  
+    
+  }
+  
+  .quantity {
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #eee;
+    margin: 0 15px;
+    position: relative;
+    top: 4px;
+    left: 27px;
+   
+  }
+  
+  .numero0 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .precio1, .precio2, .precio3 {
+  position: relative;
+    left: 30px;
+}
+.precioo{
+  margin-left: 20px;
+  margin-right: 10px;
+  position: relative;
+  left: 10px;
+}
+
+.precio::after{
+  position: relative;
+  left: 10px;
+}
+
+.cantidad{
+  left: 20px;
+  position: relative;
+}
+
+.container {
+  padding: 100px;
+}
+.container1::before{
+  padding-right: 50px;
+}
+
+.total{
+  margin-left: 1px;
+}
+.total1, .total2, .total3 {
+  margin-left: 1px;
+}

@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none; /* Permitir interacción con otros elementos */
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #007BFF; /* Color azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 10px; /* Espaciado externo */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+}
+
+.trail {
+    position: absolute; /* Posiciona el elemento de forma absoluta respecto a su contenedor más cercano que tenga posición relativa (en este caso, el body) */
+    width: 20px; /* Ancho del elemento de la estela */
+    height: 20px; /* Altura del elemento de la estela */
+    border-radius: 50%; /* Hace que el elemento tenga bordes redondeados, formando un círculo */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo negro con 50% de opacidad, creando un efecto de sombra */
+    pointer-events: none; /* Permite que los eventos del mouse pasen a través de este elemento, evitando que interfiera con la interacción del usuario con otros elementos (como botones) */
+    transition: opacity 1s ease-out; /* Aplica una transición suave a la propiedad de opacidad durante 1 segundo, usando una función de tiempo 'ease-out' para que el desvanecimiento sea más natural */
+}

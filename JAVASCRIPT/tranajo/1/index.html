@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Imágenes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Imágenes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Selecciona una imagen</h2>
+        <div class="gallery">
+            <div class="item">
+                <img src="images/imagen1.jpg" alt="Imagen 1">
+
+                <p>Precio: $10</p>
+<button class="add-to-cart" onclick="addToCart('imagen1.jpg', 10)">Agregar al Carrito</button>
+
+            </div>
+            <div class="item">
+                <img src="images/imagen2.jpg" alt="Imagen 2">
+
+                <p>Precio: $15</p>
+<button class="add-to-cart" onclick="addToCart('imagen2.jpg', 15)">Agregar al Carrito</button>
+
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

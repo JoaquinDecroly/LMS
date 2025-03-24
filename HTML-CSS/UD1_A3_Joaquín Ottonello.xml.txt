@@ -1,0 +1,54 @@
+<cv>
+  <data>
+    <name>
+      <firstname>Joaquín</firstname>
+      <secondname>Valentín</secondname>
+      <lastname>Ottonello</lastname>
+    </name>
+    <email smtp="joaquinottonello@gmail.com"/>
+    <phone>+34 000 000 000</phone>
+  </data>
+
+  <section>
+    <title>Presentación</title>
+    <desc>
+      Administrador de redes con experiencia + Desarrollado de Aplicaciones Web.
+    </desc>
+  </section>
+
+  <section>
+    <title>Estudios</title>
+    <item>
+      <title>Sistemas Microinformáticos y Redes</title>
+      <company>CC. Decroly </company>
+      <dates>2021-2023</dates>
+      <desc>
+       Administrador de redes, con coonocimientos en Linux, Windows...
+      </desc>
+    </item>
+  </section>
+<section>
+    <title>Estudios 2</title>
+    <item>
+      <title>Desarrollo de Aplicacioines Web</title>
+      <company>CC. Decroly </company>
+      <dates>2024-2026</dates>
+      <desc>
+       Desarrollador de Aplicaciones Web, con experiencia en Java, javascript, html, css, y xml.
+      </desc>
+    </item>
+  </section>
+ 
+
+  <section>
+    <title>Skills</title>
+    <item>
+      <title>Lenguajes de Programación</title>
+      <desc>Java, javascript, html, css, y xml</desc>
+    </item>
+    <item>
+      <title>IDEs</title>
+      <desc>Spring, Eclipse</desc>
+    </item>
+  </section>
+</cv>

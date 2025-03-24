@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente de la página */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para cambios de color */
+}
+
+header {
+    background-color: #4CAF50; /* Color de fondo del encabezado */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.carrito {
+    font-size: 1.2em; /* Tamaño de fuente */
+    display: flex; /* Usar flexbox para alinear icono y texto */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.carrito i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+main {
+    padding: 20px; /* Espaciado interno del main */
+}
+
+.producto {
+    border: 1px solid #ccc; /* Borde de los productos */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen entre productos */
+}
+
+button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+.items-carrito {
+    padding: 20px; /* Espaciado interno */
+    border-top: 1px solid #ccc; /* Borde superior */
+}
+
+.item-carrito {
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    margin: 5px 0; /* Margen entre elementos del carrito */
+}
+
+/* Estilos para el modo nocturno */
+body.modo-nocturno {
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #ffffff; /* Color de texto claro */
+}
+
+header.modo-nocturno {
+    background-color: #1f1f1f; /* Color de fondo del encabezado en modo nocturno */
+}
+
+.producto.modo-nocturno {
+    border: 1px solid #444; /* Borde de los productos en modo nocturno */
+}
+
+button.modo-nocturno {
+    background-color: #333; /* Color de fondo del botón en modo nocturno */
+}
+
+button.modo-nocturno:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón en modo nocturno */
+}

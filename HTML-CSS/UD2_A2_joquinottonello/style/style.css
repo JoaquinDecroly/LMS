@@ -1,0 +1,91 @@
+body {
+    
+    font-family: Arial, sans-serif;
+  
+    background: rgb(233,233,237);
+
+}
+ 
+.container {
+    /*contenedor de cada div*/
+    max-width: 800px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.step {
+    /*circulo contenedor de la imagen*/
+    margin: 20px;
+    background: whitesmoke;
+    border-radius: 100%;
+    padding-top: 1%;
+    width: 25%;
+    height: 150px;
+    background: whitesmoke;
+
+}
+.number {
+    /*circulo contenedor del numero*/
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: red;
+    display: grid;
+    left: 80px;
+    width: 15%;
+   text-align: center;
+
+}
+
+p{
+    /*texto*/
+  text-align: unset;
+  margin-top: 50px;
+  bottom: 100px;
+  padding-top: 50px;
+  position: relative;
+}
+
+.png{
+    /*div contenedor imagen y texto*/
+    text-align: center;   
+}
+.step:nth-child(4) {
+    /*herencia del contenedor 4*/
+    margin-top: 70px;
+}
+
+.step:nth-child(5) {
+     /*herencia del contenedor 5*/
+    margin-top: 70px;
+}
+.img{
+    /*imagen*/
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 30px;
+}
+.step {
+    transition: transform 0.2s ease-in-out; /*transicion del circulo, estado original*/
+    cursor: pointer;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0);
+ }
+ 
+ .step:hover {
+    transform: scale(1.1); /*transicion circulo, estado modificado, detectando pointer*/
+    box-shadow: 1px 7px 15px rgba(0, 0, 0, 0.993);
+    
+ }
+
+ 
+
+ 
+ 
+ 
+ 
+ 

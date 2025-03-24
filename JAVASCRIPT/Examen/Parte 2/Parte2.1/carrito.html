@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+        <div class="carrito">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cantidad-carrito">0</span> productos - Total: $<span id="total-carrito">0.00</span>
+        </div>
+        <button id="modo-nocturno" onclick="toggleModoNocturno()">
+            <i id="icono-modo" class="fas fa-sun"></i>
+        </button>
+        <button onclick="location.href='index.html'">Volver a la Tienda</button>
+    </header>
+    <div id="items-carrito" class="items-carrito"></div>
+    <script src="script.js"></script>
+</body>
+</html>

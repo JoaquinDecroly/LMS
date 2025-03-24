@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compralo - Tu tienda en línea</title>
+
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
+    <script src="script.js" defer></script> <!-- Ensure this path is correct -->
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <div class="ParteIzquierda">
+                <button id="cambiar-tema" class="boton-tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z"></path>
+                    </svg>
+                </button>
+                <input type="checkbox" id="menu-toggle" class="hamburguesa">
+                <label for="menu-toggle">☰</label>
+                <ul id="menu-desplegable" class="oculto">
+                    <li><a href="perfil.html">Perfil</a></li>
+
+
+                    <li><a href="carrito.html">Carrito</a></li>
+                    <li><a href="categoria.html">Categoría</a></li>
+
+
+                    <li><a href="masPaginas/nosotros.html">Nosotros</a></li>
+                    <li><a href="masPaginas/Ayuda.html">Ayuda</a></li>
+
+
+                </ul>
+            </div>
+            <div class="Marca">
+                <h1>Encantalo, te comprará</h1>
+
+            </div>
+            <div class="ParteDerecha">
+                <form id="form-busqueda" action="#" method="GET">
+                    <input type="text" id="entrada-busqueda" placeholder="Buscar productos..." aria-label="Buscar productos">
+                    <button type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                            <path d="M21 21l-6 -6"></path>
+                        </svg>
+                    </button>
+                </form>
+                <div id="icono-carrito" style="display: flex; align-items: center; cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                        <path d="M17 17h-11v-14h-2"></path>
+                        <path d="M6 5l14 1l-1 7h-13"></path>
+                    </svg>
+                    <span id="suma-carrito">0.00€</span>
+                    <button id="vaciar-carrito">Vaciar Carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="contador" id="contador-rebajas">
+            <p>Próximas Rebajas en: <span id="tiempo-rebajas"></span></p>
+        </div>
+    </header>
+    <section class="prodPrin">
+        <div class="lista-productos">
+            <!-- Product Template -->
+            <div class="producto" data-id="1">
+                <img src="../Recursos/Imagenes/goku_Super.png" class="imagen-producto" alt="Goku Super">
+
+                <div class="info-producto">
+                    <p class="precio">40.95€</p>
+                    <p class="descripcion">Ingresar Descripcion.</p>
+                </div>
+                <h3>Goku</h3>
+                <button class="añadir-al-carrito">Añadir al carrito</button>
+                <button class="reproducir-audio" data-audio="../Recursos/Audios/goku.mp3"> Reproducir Audio</button>
+            </div>
+            <!-- Repeat for other products -->
+        </div>
+    </section>
+    <footer class="pie-principal">
+        <div class="columnas-pie">
+            <div class="columna-pie">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="masPaginas/nosotros.html">Acerca de Nosotros</a></li>
+
+                    <li><a href="masPaginas/condicionesCompra.html">Condiciones de Compra</a></li>
+
+                    <li><a href="masPaginas/cookies.html">Política de Privacidad</a></li>
+
+                </ul>
+            </div>
+            <div class="columna-pie">
+                <h3>Contactar</h3>
+                <ul>
+                    <li><a href="masPaginas/Ayuda.html">Contacto y Ayuda</a></li>
+
+                    <li><a href="masPaginas/Devoluciones.html">Devoluciones</a></li>
+
+                    <li><a href="masPaginas/cookies.html">Politica de cookies</a></li>
+
+                </ul>
+            </div>
+            <div class="columna-pie">
+                <h3>Comunidad</h3>
+                <ul class="redes-sociales">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="parte-inferior-pie">
+            <p>© 2025 Compralo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
