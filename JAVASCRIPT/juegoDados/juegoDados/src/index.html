@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Dado 3D</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h2>Juego de Dado 3D</h2>
+<p id="turn">Turno de Jugador 1</p>
+<p id="score1">Jugador 1: 0 puntos</p>
+<p id="score2">Jugador 2: 0 puntos</p>
+
+<!-- Botón para mostrar las normas -->
+<button id="rulesBtn">Mostrar Normas</button>
+
+<!-- Contenedor de normas -->
+<div id="rules" class="rules-container" style="display: none;">
+    <h3>Normas del Juego</h3>
+    <ul>
+        <li>Cada jugador comienza con 0 puntos.</li>
+        <li>En cada turno, un jugador lanza el dado y suma el número obtenido a su total de puntos.</li>
+        <li>Si un jugador lanza un 6, puede lanzar de nuevo.</li>
+        <li>El primer jugador en alcanzar 20 puntos gana el juego.</li>
+    </ul>
+</div>
+
+<div class="scene">
+    <div class="cube">
+        <div class="cube__face cube__face--1">1</div>
+        <div class="cube__face cube__face--2">2</div>
+        <div class="cube__face cube__face--3">3</div>
+        <div class="cube__face cube__face--4">4</div>
+        <div class="cube__face cube__face--5">5</div>
+        <div class="cube__face cube__face--6">6</div>
+    </div>
+    <button class="rollBtn">Lanzar el Dado</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
