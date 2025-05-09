@@ -1,0 +1,36 @@
+header{
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: initial;
+}
+
+#buscador{
+  position: relative;
+  right: 140px;
+  transition: none;
+  width: 297px;
+  width: 290px; 
+  transform: translate(-338px, 0px);
+}
+
+#carrito{
+    position: relative;
+    left: 40%;
+    gap: 90px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: center; 
+    padding-left: 52px; 
+    padding-right: 19px; 
+    margin: 3px 3px 11px; 
+    will-change: top, left; 
+    left: 143px; 
+    top: 1px;
+}
+
+#categoria{
+ text-decoration: none;
+    flex-direction: row;
+    display: flex;
+}
