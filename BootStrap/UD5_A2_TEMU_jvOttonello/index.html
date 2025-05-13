@@ -1,57 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Temu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- navbar -->
-    <header>
-      <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <div class="d-sm-flex align-items-center w-100">
-            <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-              <img src="img/temu-logo-2.png" alt="Logo" width="20%" height="100%" class="d-inline-block align-text-top">
-            </a>
-            <!-- Buscador -->
-            <form class="d-flex w-100 p-1" id="buscador" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <ul id="carrito">
-                  <li id="carrito1">Sign In</li>
-                  <li id="carrito2">Cart</li>
-                  <li></li>
-                </ul>          
-            </form>
-          </div>
+<div class="container">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">TEMU</div>
+        <label>
+            <input class="search" type="text" placeholder="Search" />
+        </label>
+        <div class="header-right">
+            <div>Sign In</div>
+            <div>Cart</div>
+            <i class="fas fa-shopping-cart"></i>
         </div>
-      </nav>
     </header>
-    <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Library</li>
-      </ol>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div>Categories</div>
+        <div>Category</div>
+        <div>Category</div>
+        <div>Category</div>
     </nav>
-<img src="img/carrito-de-compras.png" class="d-flex" alt="Logo" width="20px" height="40px" class="d-inline-block align-text-top">
-      <!-- categorias izq. -->
-       <div id="categoria">
-      <div class="card" style="width: 18rem;">
-        <div class="card-header">
-          Categorías
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">1</li>
-          <li class="list-group-item">2</li>
-          <li class="list-group-item">3</li>
-          <li class="list-group-item">4</li>
-          <li class="list-group-item">5</li>
-        </ul>
-      </div>
-     </div>
+
+    <!-- Main -->
+    <main class="main-content">
+        <!-- Left Categories -->
+        <aside class="left-categories">
+            <div class="categories-title">Categories</div>
+            <ul class="categories-list">
+                <li class="category-item">Categoría 1</li>
+                <li class="category-item">Categoría 2</li>
+                <li class="category-item">Categoría 3</li>
+                <li class="category-item">Categoría 4</li>
+                <li class="category-item">Categoría 5</li>
+            </ul>
+        </aside>
+
+        <!-- Contenido -->
+        <section class="center-content">
+            <!-- Banner -->
+            <div class="banner">Banner</div>
+            <!-- Grid -->
+            <div class="grid-items">
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <div class="price">Price</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo -->
+        <aside class="promo">Promo</aside>
+    </main>
+</div>
 </body>
-<script href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </html>
