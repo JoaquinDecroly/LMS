@@ -1,0 +1,61 @@
+.header-right{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    align-items: center;
+   left: 25vw;
+}
+
+.form-control.me-2{
+    position: relative;
+    width: 40vw;
+    left: 16vw;
+    color: #333333;
+    border-radius: 20px;
+}
+
+.tema.generico{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 8px;
+
+}
+
+.navbar-brand{
+    position: relative;
+}
+
+
+
+ .header .navbar {
+    position: fixed;
+     z-index: 1;
+}
+
+#sentinela {
+    height: 1px;
+}
+
+.header .navbar {
+    transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+.nav{
+    position: relative;
+    top: 10vh;
+    z-index: 1;
+}
+
+.nav:hover{
+    transform-style: preserve-3d;
+    transform: translateZ(1fr);
+}
+/*body:has(#sentinela:not(:in-viewport)) .header .navbar {*/
+/*    background-color: #fff !important;*/
+/*    box-shadow: 0 2px 8px rgba(0,0,0,0.1);*/
+/*}*/
+
+
