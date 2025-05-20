@@ -1,12 +1,15 @@
+/* ================= Header derecho ================= */
 .header-right{
     position: relative;
     display: flex;
     flex-direction: row;
     gap: 2vw;
     align-items: center;
-   left: 25vw;
+    left: 25vw;
+    z-index: 1;
 }
 
+/* ================= Buscador ================= */
 .form-control.me-2{
     position: relative;
     width: 40vw;
@@ -14,48 +17,158 @@
     color: #333333;
     border-radius: 20px;
 }
+.fa-search{
+    z-index: 1;
+    border: hidden;
+    background: transparent;
+    position: relative;
+    left: 11vw;
+}
 
+/* ================= Tema genérico ================= */
 .tema.generico{
     font-family: 'Segoe UI', sans-serif;
     background-color: #f8f9fa;
     color: #333;
     padding: 1.5rem;
     border-radius: 8px;
-
 }
 
+/* ================= Navbar y navegación ================= */
 .navbar-brand{
     position: relative;
 }
-
-
-
- .header .navbar {
+.header .navbar  {
     position: fixed;
-     z-index: 1;
+    z-index: 1;
+    margin-top: 0;
 }
-
+.header .navbar .header-right{
+    transition: background-color 0.4s, box-shadow 0.4s;
+}
 #sentinela {
     height: 1px;
 }
-
-.header .navbar {
-    transition: background-color 0.4s, box-shadow 0.4s;
-}
-
 .nav{
     position: relative;
     top: 10vh;
-    z-index: 1;
+    z-index: 0;
 }
 
-.nav:hover{
+/* ================= Tarjetas de libros ================= */
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: visible;
+}
+.card:hover{
     transform-style: preserve-3d;
-    transform: translateZ(1fr);
+    transform: translateZ(20px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
-/*body:has(#sentinela:not(:in-viewport)) .header .navbar {*/
-/*    background-color: #fff !important;*/
-/*    box-shadow: 0 2px 8px rgba(0,0,0,0.1);*/
-/*}*/
 
+/* ================= Enlaces header derecho ================= */
+a .header-right{
+    text-decoration: none;
+    color: black;
+}
 
+/* ================= Carrusel de imágenes ================= */
+.carousel-img {
+    max-width: 400px;
+    max-height: 300px;
+    object-fit: contain;
+}
+#carouselExampleAutoplaying{
+    top: 25vh;
+    z-index: -2;
+    position: sticky;
+}
+.carousel-control-prev {
+    left: 20vw;
+}
+.carousel-control-next {
+    right: 20vw;
+}
+
+/* ================= Contenedor general ================= */
+.container-fluid{
+    position: relative;
+    width: 100%;
+}
+
+/* ================= Modal ================= */
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+/* ================= Botones principales ================= */
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+/* ================= Fila y columnas de tarjetas ================= */
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+}
+.row .col-md-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= Hero banner (aside derecho) ================= */
+.hero-banner {
+    position: relative;
+    background: #f0f4ff;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    width: 20vw;
+    transform: translate(1013px, 0px);
+    bottom: 330vh;
+    left: 15vw;
+}
+.hero-banner:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    transform: translate(1013px, 0px) scale(1.02);
+}
+.hero-img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+.hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.hero-content p {
+    margin-bottom: 1rem;
+    color: #333;
+}
+/* ================= Desplegable iframe ================= */
+#iframe{
+    object-position: top;
+}
+.dropdown-menu {
+    z-index: 1055 !important;
+    position: absolute !important;
+}
